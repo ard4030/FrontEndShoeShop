@@ -269,6 +269,23 @@ width: 100%;
 .acenter {align-items: center;}
 .mt20{margin-top: 20px;}
 .mr15{margin-right: 15px;}
+.jcenter{justify-content: center;}
+.fn20{font-size: 20px;}
+.fn12{font-size: 12px;}
+.defcolor{color: #555;}
+.mb10{margin-bottom: 10px;}
+.lightgreen{color: #63e68f;}
+.green{color: #3dbc67;}
+.fn10{font-size: 12px;}
+.w50{width: 50%;}
+.narang{color: #fa7369;}
+.w100{width: 100%;}
+.prelative{position: relative;}
+.lightcol{color: #888;}
+.mauto{margin: auto;}
+.dblock{display: block;}
+.tcenter{text-align: center;}
+.inum{font-family: inum;}
 
 /* .ant-slider-track{
   height: 6px!important;

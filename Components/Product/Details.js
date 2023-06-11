@@ -2,6 +2,8 @@
 import React,{useState} from 'react'
 import CommentUsers from './CommentUsers'
 import Moshakhasat from './Moshakhasat'
+import Naghd from './Naghd'
+import Porsesh from './Porsesh'
 import styles from "./product.module.css"
 import Tozihat from './Tozihat'
 
@@ -24,8 +26,14 @@ const Details = ({data}) => {
             <span
             className={`${active.name === "نظرات کاربران" && styles.activeMosh}`}
             onClick={() => setActive({name:"نظرات کاربران",comp:<CommentUsers data={data}/>})}>نظرات کاربران</span>
-            <span>سوالات کاربران</span>
-            <span>نقد و بررسی</span>
+            
+            <span
+             className={`${active.name === "سوالات کاربران" && styles.activeMosh}`}
+             onClick={() => setActive({name:"سوالات کاربران",comp:<Porsesh data={data}/>})}>سوالات کاربران</span>
+
+            <span
+            className={`${active.name === "نقد و بررسی" && styles.activeMosh}`}
+            onClick={() => setActive({name:"نقد و بررسی",comp:<Naghd data={data}/>})}>نقد و بررسی</span>
         </div>
 
         <div className={styles.contDetail}>

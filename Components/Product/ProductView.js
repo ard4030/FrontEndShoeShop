@@ -29,6 +29,7 @@ const ProductView = ({data}) => {
     initActive(data)
   }, [])
 
+  // console.log(data)
   return (
     <div className={`${styles.productContent}`}>
       <div className='container pt5'>
@@ -70,7 +71,7 @@ const ProductView = ({data}) => {
           </div>
 
           <div>
-            <Brands />
+            <Brands data={data} />
             <Others />
           </div>
         </div>

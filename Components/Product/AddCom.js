@@ -10,6 +10,7 @@ import axios from 'axios'
 import { BASE_URL } from '@/utils/constans'
 
 const AddCom = ({data}) => {
+    console.log(data)
     const {user} = useContext(AuthContext)
     const [myData,setMydata] = useState({
         rating:0,
@@ -21,7 +22,7 @@ const AddCom = ({data}) => {
         ghovTit:"",
         zafTit:"",
         message:"",
-        ghov:[],
+        ghovat:[],
         zaf:[],
         productId:data._id
     })
@@ -30,12 +31,11 @@ const AddCom = ({data}) => {
       setMydata({...myData,rating:value})
     }
 
-
     const handleChange = (val) => {
 
         if(val === "ghov"){
-            if(!myData.ghov.includes(myData.ghovTit)){
-                setMydata({...myData,ghov:[...myData.ghov,myData.ghovTit]})
+            if(!myData.ghovat.includes(myData.ghovTit)){
+                setMydata({...myData,ghovat:[...myData.ghovat,myData.ghovTit]})
             }
         }else{
             if(!myData.zaf.includes(myData.zafTit)){
@@ -44,7 +44,6 @@ const AddCom = ({data}) => {
         }
         
     }
-
 
     const marks = {
         0: {label: <strong>خیلی بد</strong>,},
@@ -68,7 +67,7 @@ const AddCom = ({data}) => {
                     ghovTit:"",
                     zafTit:"",
                     message:"",
-                    ghov:[],
+                    ghovat:[],
                     zaf:[],
                     productId:data._id
                 })
@@ -87,9 +86,13 @@ const AddCom = ({data}) => {
         user ? 
 
         <div className={styles.comenting}>
-                <p> دیدگاه خود را بنویسید </p>
-                <p style={{marginTop:'15px',marginBottom:"3px"}}>امتیاز شما</p>
-                <StarRating initialRating={myData.rating} onRatingChange={handleRatingChange} />
+                <div className='dflex jsb'>
+                    <p> دیدگاه خود را بنویسید </p>
+                    <div className='dflex acenter'>
+                        <p style={{marginTop:'0px',marginBottom:"0px",marginLeft:"10px"}}>امتیاز شما</p>
+                        <StarRating initialRating={myData.rating} onRatingChange={handleRatingChange} />
+                    </div>
+                </div>
 
                 <div className='mt20'>
                     <div className={styles.range}>
@@ -130,10 +133,10 @@ const AddCom = ({data}) => {
                             {myData.ghovTit.length > 1 && <span onClick={() => {handleChange("ghov")}}> <BiPlus /></span>}
                         </div>
                         {
-                            myData.ghov.map((item,index) => 
+                            myData.ghovat.map((item,index) => 
                             <div key={index} className={styles.delNogh}>
                                 <span>{item}</span>
-                                <span onClick={() => setMydata({...myData,ghov:myData.ghov.filter(my => my !== item)})}><BiPlus /></span>
+                                <span onClick={() => setMydata({...myData,ghovat:myData.ghovat.filter(my => my !== item)})}><BiPlus /></span>
                             </div>
                             )
                         }

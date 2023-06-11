@@ -11,6 +11,8 @@ import LoadingIndicator from '@/Components/Global/Loadand'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import 'react-circular-progressbar/dist/styles.css';
+
 import 'swiper/swiper-bundle.css';
 
 // const inter = Inter({ subsets: ['latin'] })
