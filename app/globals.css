@@ -1,27 +1,286 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: ireg;
+  src: url(../public/Fonts/IRANYekanRegular.ttf);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: ilight;
+  src: url(../public/Fonts/IRANYekanLight.ttf);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@font-face {
+  font-family: ibold;
+  src: url(../public/Fonts/IRANYekanBold.ttf);
+}
+
+@font-face {
+  font-family: inum;
+  src: url(../public/Fonts/Farsi_numerals/IRANYekanMediumFaNum.ttf);
+}
+
+@font-face {
+  font-family: inumlight;
+  src: url(../public/Fonts/Farsi_numerals/IRANYekanLightFaNum.ttf);
+}
+
+@font-face {
+  font-family: inumreg;
+  src: url(../public/Fonts/Farsi_numerals/IRANYekanRegularFaNum.ttf);
+}
+
+.ireg{font-family: ireg;}
+.ilight{font-family: ilight;}
+.inum{font-family: inum;}
+.ibold{font-family: ibold;}
+
+
+body{
+  margin: 0;
+  direction: rtl;
+  font-family: ireg;
+  background: #eff1f5;
+}
+
+.prelative{
+  position: relative;
+}
+
+.container{
+  width: 83%;
+  margin: auto;
+  padding: 20px;
+}
+
+.flex-left{
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.flex-right{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mt10{
+  margin-top: 10px;
+}
+
+.mt15{
+  margin-top: 10px;
+}
+
+.bglight{
+  background: #eee;
+}
+
+.btnDef{
+  text-decoration: none;
+  font-family: ireg;
+  background: #e03543;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 15px;
+  transition: 0.3s all;
+  border: none;
+  box-shadow: 0px 6px 8px #f4f4f4;
+  height: max-content;
+}
+
+.btnDef:hover{
+  background: #aa1a26;
+  text-decoration: none;
+}
+
+.c-pointer{
+  cursor: pointer;
+}
+
+.inputDef{
+  border: none;
+background: #eee;
+padding: 8px 10px;
+border-radius: 5px;
+width: 100%;
+}
+
+.dflex{
+  display: flex;
+}
+
+.dwrap{
+  flex-wrap: wrap;
+}
+
+.acenter{
+  align-items: center;
+}
+
+.ml10{
+  margin-left: 10px;
+}
+
+.mt30{
+  margin-top: 30px;
+}
+
+.mt60{
+  margin-top: 30px;
+}
+
+.loading-indicator{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.532);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hor{
+  width: 100%;
+  height: 1px;
+  background: #d9d9d9;
+  margin: 10px 0;
+}
+
+
+.pb0{
+  padding-bottom: 0!important;
+}
+
+.carousel-root{
+  width: 100%;
+}
+
+.w-65{
+  width: 65%!important;
+}
+
+.w-25{
+  width: 25%!important
+}
+
+
+.bgblue{
+  background: white;
+  min-height: 20px;
+}
+
+.compLeft{
+  width: 24%!important;
+}
+
+.compRight{
+  width: 74%!important;
+}
+
+.compLeft .slick-dots{
+  bottom: -40px;
+}
+
+/* .compLeft .slick-dots li{
+  margin: 0;
+  width: 11px;
+  height: 12px;
+}
+
+.compLeft .slick-dots li button::before{
+  content: '';
+} */
+
+.compLeft .slick-dots li {
+	position: relative;
+	display: inline-block;
+	width: 13px;
+	height: 20px;
+	margin: 0 0px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.compLeft .slick-dots li.slick-active button::before {
+	opacity: 1;
+	color: #0183ff;
+}
+
+.catslider{
+  margin: 20px 0px;
+}
+
+.centersec{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.centersec > div{
+  width: 50%;
+}
+
+.sec4{
+  margin-top: 65px;
+  margin-bottom: 20px;
+}
+
+.sec5{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sec6{
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.linkTag{
+  text-decoration: none;
+  color: inherit;
+}
+
+.pt5{
+  padding-top: 5px;
+}
+.dflex {display: flex;}
+.jsb {justify-content: space-between;}
+.acenter {align-items: center;}
+.mt20{margin-top: 20px;}
+.mr15{margin-right: 15px;}
+
+/* .ant-slider-track{
+  height: 6px!important;
+  background-color: #e0e2e4!important;
+} */
+
+/* .ant-slider-dot-active{
+  top: 1px!important;
+} */
+
+.ant-slider-mark strong{
+  font-family: ireg;
+  font-weight: 400;
+  font-size: 12px;
 }

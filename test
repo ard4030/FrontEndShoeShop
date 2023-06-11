@@ -1,0 +1,36 @@
+    // <div>
+    //     <ul className={style.menu1}>
+    //         {
+    //             data && data.length > 0 && data.map((item,index) => 
+    //             <li key={index}>
+    //                 <div className='flex-between'>
+    //                     <span className={style.title}>{item.title}</span>
+    //                     <Image className={style.downIco} src={down} width={8} height={10} alt="" />
+    //                 </div>
+    //              </li>
+    //             )
+    //          }
+            
+    //     </ul>
+    // </div>
+
+    useEffect(() => {
+        getData();
+      }, []);
+    
+      const getData = async () => {
+        const res = await fetch(`${BASE_URL}/user/category/getAllCategory`, {
+          headers: { 'Content-Type': 'application/json' },
+          cache: 'no-store',
+          method: 'GET',
+        });
+        const data = await res.json();
+    
+        if (data && data.success) {
+          setData(data.data);
+        } else {
+          alert(data.message);
+        }
+      };
+
+      const [data, setData] = useState([]);

@@ -1,0 +1,49 @@
+.cont{
+    width: 49%;
+    background: #fff url("https://demos.mahdisweb.net/digiland/wp-content/uploads/2023/03/03-slide-1.png") no-repeat right;
+      background-size: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 145px;
+    border-radius: 10px;
+    background-size: auto 100%;
+}
+
+.cont > div{
+    margin-left: 80px;
+}
+
+.cont > div > p{
+    margin: 0;
+    font-size: 10px;
+    color: #82d4d4;
+}
+
+.cont > div > h3{
+    margin: 0;
+font-size: 14px;
+font-weight: 400;
+}
+
+.cont > div > div{
+    background: #ebebed;
+    font-size: 12px;
+    padding: 3px 9px;
+    border-radius: 26px;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bst{
+    padding: 3px;
+    background: #0183ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,181 @@
+.content{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.left{
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 23px;
+  height: 293px;
+  /* display: flex; */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 0;
+  position: relative;
+  top: 11px;
+  width: 100%;
+}
+
+.left > button{
+    margin: auto;
+    margin-bottom: auto;
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px 0px;
+  border: none;
+  border-radius: 10px;
+  font-family: ireg;
+  color: #696969;
+  font-size: 12px;
+  transition: 0.4s all;
+  text-align: right;
+  padding-right: 15px;
+  position: relative;
+  cursor: pointer;
+  background: #f2f2f2;
+}
+
+.left > button:last-child{
+    margin-bottom: 0;
+}
+
+.active{
+    background: #0183ff !important;
+    color: #fff !important;
+    border-radius: 10px 0px 0px 10px !important;
+}
+
+.left > button.active::before{
+    opacity: 1;
+}
+
+.left > button::before{
+    position: absolute;
+    content: "";
+    right: -39px;
+    height: 34px;
+    background: #0183ff;
+    width: 15px;
+    z-index: 10;
+    top: 0;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: inset 10px 0px 9px -5px hsl(0deg 0% 0% / 19%);
+    opacity: 0;
+}
+
+.left > button:hover::before{
+    opacity: 1;
+ }
+
+ .left > button:hover{
+    background: #0183ff !important;
+    color: #fff !important;
+    border-radius: 10px 0px 0px 10px !important;
+}
+
+.xx{
+    width: 100%;
+    height: 335px;
+}
+
+
+.right{
+    width: 75%;
+    height: 335px;
+}
+
+.mySli > div{
+    background: #fff;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    border-radius: 10px;
+    height: 335px;
+    flex-wrap: wrap;
+}
+
+.price{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    direction: rtl;
+    font-family: inum;
+    font-size: 13px;
+    color: #949494;
+    height: max-content;
+    width: 100%;
+    padding-right: 13px;
+  }
+
+  .price > span.disc{
+    margin: 0 10px;
+    color: #0183ff;
+  }
+
+  .fn1{
+    font-size: 12px;
+position: relative;
+right: -8px;
+  }
+
+  .khat{
+    position: relative;
+  }
+
+  .khat::before {
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    width: 100%;
+    height: 1px;
+    background: red;
+    z-index: 2;
+    content: "";
+    transform: rotate(-9deg);
+  }
+
+  .image{
+    width: 165px;
+    height: 165px;
+    position: relative;
+  }
+
+  .name{
+    font-size: 13px;
+width: 100%;
+padding: 0 10px;
+text-align: right;
+max-height: 44px;
+overflow: hidden;
+  }
+
+  .mySli footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    direction: rtl;
+  }
+
+  .icons > span{
+    margin-left: 10px;
+    margin-right: 1px;
+    width: 15px;
+    height: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icons > span > svg{
+    color: #828282;
+  }  
+
+  .stars > span > svg {
+    color: #fdc47a;
+  }

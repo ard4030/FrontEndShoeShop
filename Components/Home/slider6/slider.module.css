@@ -1,0 +1,230 @@
+.header{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+
+.header::before{
+    position: absolute;
+    width: 80%;
+    height: 1px;
+    border-bottom: 2px dotted #d5d5d5;
+    content: "";
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.titHead {
+    display: flex;
+    align-items: center;
+    background: #eff1f5;
+    z-index: 2;
+    padding-left: 9px;
+}
+
+.titHead svg{
+    width: 50px;
+height: 35px;
+}
+
+.titHead > span{
+    margin-right: 3px;
+    font-size: 14px;
+}
+
+.btn{
+    background: #ebebed;
+border: none;
+box-shadow: none;
+font-size: 12px;
+padding: 6px 15px;
+border-radius: 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.btn > span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2px;
+    font-family: ireg;
+}
+
+.btn > span:first-child > svg{
+    color: #fff;
+}
+
+.btn > span:first-child{
+    padding: 3px;
+    background: #0183ff;
+    border-radius: 100%;
+}
+
+/* Slider */
+
+
+.item > div{
+    margin: 10px;
+    background: #fff;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.xx{
+   
+}
+
+.image{
+    position: relative;
+    width: 68%;
+    height: 174px;
+}
+
+.name{
+    width: 100%;
+text-align: right;
+font-size: 13px;
+padding: 0 10px;
+height: 49px;
+background: #fff;
+overflow: hidden;
+}
+
+.price{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    direction: rtl;
+    font-family: inum;
+    font-size: 13px;
+    color: #949494;
+    height: max-content;
+    padding-right: 13px;
+  }
+
+  .price > span.disc{
+    margin: 0 10px;
+    color: #0183ff;
+  }
+
+  .fn1{
+    font-size: 12px;
+position: relative;
+right: -8px;
+  }
+
+  .khat{
+    position: relative;
+  }
+
+  .khat::before {
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    width: 100%;
+    height: 1px;
+    background: red;
+    z-index: 2;
+    content: "";
+    transform: rotate(-9deg);
+  }
+
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+      margin-top: 10px;
+    margin-top: 25px;
+    position: relative;
+  }
+
+  .rft{
+    background: #f9f9f9;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0px 0px 10px;
+    cursor: pointer;
+    transition: 0.4s all;
+  }
+
+  .rft:hover{
+    background: #0183ff;
+  }
+
+  .rft:hover > svg{
+    color: #fff;
+  }
+
+  .itFooter{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: #f9f9f9;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: 0.5s all;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer:hover .itFooter{
+    transform: translateX(0);
+  }
+
+  .itFooter > div:last-child{
+    margin-right: 10px;
+  }
+
+
+  .r2{
+    font-size: 15px;
+    margin-right: 8px;
+    background: #0183ff;
+    color: #fff;
+    border-radius: 100px;
+    padding: 5px 10px;
+    display: flex;
+    cursor: pointer;
+  }
+
+  .r2 >span:first-child{
+    font-size: 10px;
+    margin-right: 5px;
+  }
+
+  .r2 >span:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .l2{
+    margin-left: 10px;
+    color: #817d7d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .l2 > span{
+    margin-right: 15px;
+    cursor: pointer;
+  }  

@@ -1,0 +1,240 @@
+.xx{
+    width: 100%;
+    height: 314px;
+    position: relative;
+    z-index: 7;
+}
+
+
+
+.contAsli{
+    display: flex;
+    justify-content: space-between;
+    height: 282px;
+    background-color: transparent;
+    background-image: linear-gradient(229deg, #23D6C1 0%, #0083FF 100%);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    direction: rtl;
+}
+
+.save{
+    background: url("../../../public/images/save.png") no-repeat center;
+    background-size: 100% 100%;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    width: 48px;
+    height: 44px;
+    font-family: inum;
+    text-align: center;
+    font-size: 15px;
+    line-height: 33px;
+    right: 13px;
+}
+
+.tit{
+    height: max-content;
+    margin-top: 29px;
+    color: #fff;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.tit::after{
+    width: 100%;
+    height: 10px;
+    background: #19acae;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.tit > span{
+    position: relative;
+    display: block;
+    z-index: 2;
+    font-size: 14px;
+    padding: 0 16px;
+}
+
+.slLeft{
+    width: 37%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.imgs{
+    position: relative;
+    width: 98%;
+    height: 80%;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slRight{
+    width: 63%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 15px;
+}
+
+.name{
+    height: max-content;
+color: #fff;
+font-size: 14px;
+}
+
+.vizh{
+    width: 100%;
+    height: max-content;
+}
+
+.vizh > ul {
+    padding-right: 20px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: max-content;
+}
+
+.vizh > ul li span{
+    color: #fff;
+    font-size: 11px;
+}
+
+.vizh > ul li span:first-child{
+    margin-left: 5px;
+}
+
+.vizh > ul li span:last-child{
+    margin-right: 5px;
+}
+
+.pricing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.price{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    direction: rtl;
+    font-family: inum;
+    font-size: 16px;
+    color: #ffffff;
+    height: max-content;
+    width: 100%;
+    padding-right: 13px;
+  }
+
+  .price > span.disc{
+    margin: 0 10px;
+    color: #fafafa;
+  }
+
+  .fn1{
+    font-size: 12px;
+position: relative;
+right: -8px;
+  }
+
+  .khat{
+    position: relative;
+  }
+
+  .khat::before {
+    position: absolute;
+    top: 12px;
+    left: -1px;
+    width: 100%;
+    height: 1px;
+    background: rgb(85, 84, 84);
+    z-index: 2;
+    content: "";
+    transform: rotate(-9deg);
+  }
+
+  .bs{
+    background: #fff;
+    padding: 15px 15px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bs > svg{
+    width: 20px;
+    height: 20px;
+  } 
+
+  .contTimer{
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .timer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contTimer> span{
+    color: #fff;
+    font-size: 11px;
+    font-family: inum;
+    padding: 4px 16px;
+    border: 1px solid #636363;
+    width: 48px;
+  }
+
+  .mSl{
+    position: relative;
+    z-index: 3;
+  }
+
+  .mSl::after{
+    width: 92%;
+    height: 12px;
+    content: "";
+    bottom: -20px;
+    background-image: linear-gradient(229deg, #14A695 0%, #0062BF 100%);
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px 0px 10px 10px;
+    z-index: 1;
+  }
+
+  .mSl::before {
+    width: 85%;
+    height: 12px;
+    content: "";
+    bottom: -31px;
+    background-color: transparent;
+    background-image: linear-gradient(229deg, #18D0BB 0%, #0B83F4 100%);
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0px 0px 10px 10px;
+    z-index: 1;
+}
+
+.sl{
+    margin-bottom: 30px;
+}

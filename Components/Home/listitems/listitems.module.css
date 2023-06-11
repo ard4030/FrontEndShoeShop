@@ -1,0 +1,89 @@
+.content{
+    margin-top: 30px;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 19%;
+    overflow: hidden;
+    margin-bottom: 46px;
+    text-decoration: none;
+}
+
+.card h3{
+    font-family: ibold;
+font-size: 16px;
+margin-bottom: 7px;
+}
+
+.contImg{
+    height: 300px;
+    display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 20px;
+}
+
+.contImg .img11{
+    width: 71%;
+    height: 100%;
+    position: relative !important;
+    object-fit: contain;
+}
+
+.price{
+    font-family: ilight;
+}
+
+.price > span{
+    font-family: inum;
+}
+
+.price .discount{
+    color: #e37e8b;
+    margin-right: 10px;
+}
+
+.price .priceAsl{
+    color: #273b48;
+}
+
+.colorpath{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.itemcol{
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+.activeItemcol{
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 100%;
+    margin-right: 5px;
+    outline: 2px solid #000;
+    outline-offset: 1px;
+}
+
+.colTit{
+    background: #cee2fe;
+color: #3c81e3;
+padding: 3px 24px;
+border-radius: 32px;
+font-family: ireg;
+font-size: 13px;
+}

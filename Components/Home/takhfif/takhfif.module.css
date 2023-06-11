@@ -1,0 +1,137 @@
+.cont{
+    width: 49%;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 145px;
+    border-radius: 10px;
+}
+
+.img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contRight{
+    display: flex;
+}
+
+.tc{
+    margin-right: 4px;
+    font-family: inum;
+    color: #168dff;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.tx1{
+    font-family: ireg;
+    font-weight: 600;
+    color: #6e6e6e;
+    margin-top: 0;
+    font-size: 13px;
+}
+
+.contRight {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+.contLeft{
+    padding: 10px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 86%;
+    border-right: 2px dashed #d7d7d7;
+    position: relative;
+}
+
+.contLeft::before{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    content: "";
+    background: #eff1f5;
+    border-radius: 100%;
+    right: -13px;
+    top: -13px;
+}
+
+.contLeft::after{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    content: "";
+    background: #eff1f5;
+    border-radius: 100%;
+    right: -13px;
+    bottom: -13px;
+}
+
+.contLeft > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.contLeft > div > span:first-child{
+    margin: 0 10px;
+}
+
+.contLeft > div > span:last-child{
+    color:green
+}
+
+.tkh{
+    padding: 5px 10px;
+margin: auto;
+justify-content: center;
+display: flex;
+align-items: center;
+text-align: center;
+width: 76%;
+background: #e5f2f2;
+color: #0c8686;
+border: 2px dashed #0c8686;
+margin-top: 10px;
+}
+
+.contTimer{
+    display: flex;
+    font-size: 12px;
+    font-family: inum;
+    margin-right: 16px;
+}
+
+.contTimer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-left: 1px solid #eee;
+    margin-left: 16px;
+    padding-left: 5px;
+}
+
+.contTimer > div > span{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.contTimer > div:last-child{
+    border: none;
+}
+
+.cyel{
+    color: gold;
+}

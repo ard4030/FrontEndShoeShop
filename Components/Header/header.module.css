@@ -1,0 +1,346 @@
+
+
+.headSec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background: #fff;
+}
+
+.aslHead{
+    background: #fff;
+    box-shadow: 0px 5px 23px -16px rgba(0, 0, 0, 0.31);
+    z-index: 2;
+position: relative;
+}
+
+.headSec > *{
+    height: 100%;
+}
+
+.basketSec{
+    width: 20%;
+    display: flex;
+align-items: center;
+}
+
+.badge{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #151414;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    top: 2px;
+    font-size: 11px;
+    right: -1px;
+    font-family: inum;
+}
+
+.menuSec{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoSec{
+    width: 20%;
+    display: flex;
+justify-content: left;
+align-items: center;
+}
+
+.menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li{
+    margin: 0 20px;
+}
+
+.menu li a{
+    color: black;
+    text-decoration: none;
+    font-family: ireg;
+}
+
+.brb{
+    border-bottom: 1px solid #f8f8f899;
+    font-family: ireg;
+}
+
+.inum{
+    font-family: inum;
+}
+
+.userCon{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    border: none;
+font-family: ireg;
+padding: 5px 36px;
+border-radius: 3px;
+margin-right: 10px;
+background: #fbab2c;
+color: #fff;
+cursor: pointer;
+transition: 0.3s all;
+}
+
+.btn:hover{
+    background: #dd9115;
+}
+
+.login{
+    text-decoration: none;
+color: #4c4c4c;
+font-family: ireg;
+font-size: 14px;
+}
+
+.icoleft{
+    position: absolute;
+    right: 11px;
+}
+
+.icoright{
+    position: absolute;
+    left: 11px;
+    top: 10px;
+}
+
+.contHead{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: relative;
+    width: 34vw;
+    margin-right: 7vw;
+}
+
+.ipSearch{
+    width: 100%;
+    padding: 8px 8px;
+      padding-right: 8px;
+    border: 1px solid #e0e1e6;
+    border-radius: 4px;
+    color: #e0e1e6;
+    padding-right: 43px;
+    font-family: ireg;
+    font-size: 11px;
+}
+
+.asliHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 
+.asliHead > div:nth-child(1){
+    width: 8%;
+} */
+
+/* .asliHead > div:nth-child(2){
+    width: 40%;
+} */
+
+/* .asliHead > div:nth-child(3){
+    width: 10%;
+} */
+
+.btPanel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EFF1F5;
+    padding: 10px 9px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btBasket{
+    height: 39px;
+border-radius: 5px 5px 5px 5px;
+background-color: transparent;
+background-image: linear-gradient(90deg, #0083FF 0%, #22D5C1 100%);
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-right: 5px;
+padding: 0 10px;
+cursor: pointer;
+}
+
+.basText{
+    color: #fff;
+font-size: 12px;
+margin: 0 10px;
+}
+
+.bagNum{
+    font-family: inum;
+    font-size: 10px;
+    background: #55555a;
+    color: #fff;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.contBot{
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+
+.menu1{
+    list-style: none;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+align-items: center;
+}
+
+.menu1 > li {
+    margin-left: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu1 > li .downIco{
+    transition: 0.3s all;
+}
+
+.menu1 > li:hover .downIco{
+    transform: rotate(180deg);
+}
+
+.p1{
+    color: #91969f;
+margin: 0;
+font-size: 11px;
+}
+
+.callb span{
+    font-family: inum;
+font-size: 14px;
+margin-left: 5px;
+}
+
+.bgbl{
+    color: #0183FF;
+}
+
+.bgbl1{
+    color: #555555;
+    margin-left: 5px;
+}
+
+.title{
+    margin-left: 10px;
+}
+
+.subMenu{
+    min-width: 150px;
+    min-height: 23px;
+    background: transparent;
+    position: absolute;
+    display: none;
+    width: max-content;
+    z-index: 5;
+    border-radius: 10px;
+}
+
+.menu1 > li:hover > .subMenu{
+    display: block;
+}
+
+.subMenu > ul {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    border-top: 3px solid #0183ff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #bebbbb;
+    top: 15px;
+    background: #fff;
+}
+
+
+
+.subMenu > ul > li{
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+/* .subMenu > ul > li:hover{
+    color: #0183ff;
+} */
+
+.liii:hover{
+    color: #0183ff;
+}
+
+.subMenu > ul > li:hover > .subMenu2{
+    display: block;
+}
+
+.subbing{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftIco{
+    transform: rotate(90deg)!important;
+}
+
+.subMenu2{
+    min-width: 150px;
+    min-height: 23px;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    display: none;
+    width: max-content;
+    z-index: 5;
+    border-radius: 10px;
+    top: 0;
+    right: 100%;
+}
+
+.subMenu2 > ul {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    border-top: 3px solid #0183ff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #bebbbb;
+}
+
+.subMenu2 > ul > li{
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
