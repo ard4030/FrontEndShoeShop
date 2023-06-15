@@ -301,6 +301,9 @@ width: 100%;
 .fn14{font-size: 14px!important;}
 .mt0{margin-top: 0;}
 .fn16{font-size: 16px!important;}
+.dnone{display: none!important;}
+
+
 /* .ant-slider-track{
   height: 6px!important;
   background-color: #e0e2e4!important;

@@ -5,9 +5,10 @@ import { GrPrevious } from "react-icons/gr"
 import { GrNext } from "react-icons/gr"
 import Image from 'next/image';
 import { BASE_URL } from '@/utils/constans';
+import { useRef } from "react";
 
 const CategorySlider = ({data}) => {
-    let sliderRef = React.useRef();
+    let sliderRef = useRef();
 
     const NextArr = () => {
   

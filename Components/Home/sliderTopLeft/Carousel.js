@@ -6,10 +6,11 @@ import { GrPrevious } from "react-icons/gr"
 import { GrNext } from "react-icons/gr"
 import { BASE_URL } from '@/utils/constans';
 import Link from 'next/link';
+import { useRef } from "react";
 
 
 const Carousel = ({data}) => {
-  let sliderRef = React.useRef();
+  let sliderRef = useRef();
 
 
   const Pricing = (props) => {

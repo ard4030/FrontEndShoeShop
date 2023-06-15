@@ -34,4 +34,7 @@ module.exports = withBundleAnalyzer({
       }
     ],
   },
+  // experimental: {
+  //   reactRefresh: false,
+  // },
 });

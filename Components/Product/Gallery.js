@@ -1,14 +1,14 @@
 "use client"
 import { BASE_URL } from '@/utils/constans';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState , useRef } from 'react';
 import Slider from 'react-slick';
 import styles from './product.module.css';
 import {BsInfoCircle} from "react-icons/bs"
 
 const Gallery = ({ images }) => {
   const [active, setActive] = useState(images[0]);
-  let sliderRef = React.useRef();
+  let sliderRef = useRef();
 
 
   const settings = {

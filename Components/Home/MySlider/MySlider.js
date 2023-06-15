@@ -5,10 +5,11 @@ import styles from "./myslider.module.css"
 import { GrPrevious } from "react-icons/gr"
 import { GrNext } from "react-icons/gr"
 import { BASE_URL } from "@/utils/constans";
+import { useRef } from "react";
 
 
 const MySlider = ({data}) => {
-  let sliderRef = React.useRef();
+  let sliderRef = useRef();
 
   const NextArr = () => {
     

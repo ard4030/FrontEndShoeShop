@@ -15,7 +15,8 @@ export function AddressWrapper({children}){
         postalCode:""
     })
 
-    const [activeItem,setActiveItem] = useState(false)
+    const [active,setActive] = useState(false)
+    const [show,setShow] = useState(false)
     const [activeType,setActiveType] = useState(false)
 
 
@@ -43,8 +44,8 @@ export function AddressWrapper({children}){
     return(
         <AddressContext.Provider value={{
             setOstan,setShahr,setAdd,setMobile,setPostalCode,address,setRes,setUpdate,
-            activeItem,setActiveItem,
-            activeType,setActiveType
+            active,setActive,
+            activeType,setActiveType,show,setShow
             }}>
             {children}
         </AddressContext.Provider>
