@@ -1,10 +1,8 @@
 "use client"
-import React from 'react'
 import styles from "./slider5.module.css"
 import Slider from "react-slick";
 import Image from 'next/image';
 import {BsCart} from "react-icons/bs"
-import MyTimer from './MyTimer';
 import { BASE_URL } from '@/utils/constans';
 
 

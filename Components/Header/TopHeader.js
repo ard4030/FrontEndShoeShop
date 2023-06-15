@@ -1,21 +1,20 @@
 "use client"
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import style from "./header.module.css"
 import logo from "../../public/images/logoasli.png"
 import Image from 'next/image'
 import search from "../../public/images/search.png"
 import filter from "../../public/images/levels.png"
-import user1 from "../../public/images/user.png"
 import bag from "../../public/images/bag.png"
 import { AuthContext } from '@/Context/AuthContext'
 import { CartContext } from '@/Context/CartContext'
-import { useRouter } from 'next/navigation'
+import{FaRegUser,} from "react-icons/fa"
+import {GrUserSettings} from "react-icons/gr"
 
 
 const TopHeader = () => {
     const {user,logOut} = useContext(AuthContext);
-    const {cart} = useContext(CartContext);
-    const router = useRouter();
+    const {cart , setShow} = useContext(CartContext);
 
     const logOutHandle = () => {
         logOut()
@@ -36,10 +35,32 @@ const TopHeader = () => {
             </div>
         </div>
         <div className='flex-left'>
-            <div className={style.btPanel}>
-                <Image src={user1} width={18} height={18} alt="" />
-            </div>
-            <div onClick={() => router.push('/cart')} className={style.btBasket}>
+            {
+                user ? 
+                    <div className={`${style.btPanel} ${style.isUser}`}>
+                        <GrUserSettings/> 
+                        <div>
+                            <ul>
+                                <li>
+                                    <span>پنل کاربری</span>
+                                </li>
+                                <li>
+                                    <span>سبد خرید</span>
+                                </li>
+                                <li onClick={() => logOutHandle()}>
+                                    <span>خروج</span>
+                                </li>
+                            </ul>
+                        </div>    
+                    </div>
+                :
+                    <div className={style.btPanel}>
+                        <FaRegUser />
+                    </div>
+
+            }
+            
+            <div onClick={() => setShow(true)} className={style.btBasket}>
                 <Image src={bag} width={20} height={20} alt="" />
                 <span className={style.basText}>سبد خرید</span>
                 <span className={style.bagNum}>{cart.length}</span>

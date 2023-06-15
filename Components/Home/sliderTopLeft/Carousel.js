@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import styles from "./carousel.module.css"
 import Slider  from "react-slick";
 import Image from 'next/image';
@@ -79,7 +78,7 @@ const Carousel = ({data}) => {
         data.map((item,index) => 
         <Link  href={`/product/${item._id}`} className={styles.mySli} key={index}>
           <div className={styles.imgSty}>
-           <Image src={`${BASE_URL}${item.images[0]}`} fill={true}  />
+           <Image src={`${BASE_URL}${item.images[0]}`} fill={true} alt=""  />
           </div>
           <p className={styles.title}>{item.p_name}</p>
           <Pricing price={item.priceAsli} discount={item.discount} />

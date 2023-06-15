@@ -22,7 +22,7 @@ const ListItems = ({data}) => {
             data && data.map((item,index) => 
             <Link href={`/product/${item._id}`} key={index} className={style.card} >
               
-              <ImageCom backgroundme={item.background} pic={item.images}/>
+              <ImageCom backgroundme={item.background} pic={item.images} />
               <h3>{item.e_name}</h3>
               <PriceCom price={item.priceAsli} discount={item.discount}/>
               {/*  <ColorCom colors={item.colors}/> */}

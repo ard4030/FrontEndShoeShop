@@ -1,12 +1,11 @@
 "use client"
 import { ProductCtx } from '@/Context/ProductContext'
-// import { CartContext } from '@/context/Cart/CartContext'
 import { useContext } from 'react'
 import style from './product.module.css'
 import {BsCheckLg} from "react-icons/bs"
 
 const ColorComp = ({title,value,index1}) => {
-    const {active,changeActive,basking} = useContext(ProductCtx)
+    const {active,changeActive} = useContext(ProductCtx)
     
   return (
     <div className={style.contColor}>

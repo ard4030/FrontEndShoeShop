@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 import styles from "./product.module.css"
 
 const Navbar = ({data,title,id}) => {

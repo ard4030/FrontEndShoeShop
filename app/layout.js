@@ -14,6 +14,8 @@ import "slick-carousel/slick/slick-theme.css";
 import 'react-circular-progressbar/dist/styles.css';
 
 import 'swiper/swiper-bundle.css';
+import Login from '@/Components/Global/Login'
+import CartView from '@/Components/Product/CartView'
 
 // const inter = Inter({ subsets: ['latin'] })
 axios.defaults.withCredentials = true;
@@ -35,6 +37,8 @@ export default function RootLayout({ children,href }) {
                     {/* <LoadingIndicator /> */}
                     {children}
                     <Footer />
+                    <Login />
+                    <CartView />
                   </AddressWrapper>
                 </ProductContext>
               </CartWrapper>

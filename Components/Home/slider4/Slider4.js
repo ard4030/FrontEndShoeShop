@@ -1,18 +1,19 @@
 "use client"
 import Image from 'next/image'
-import React,{useEffect,useState} from 'react'
+import {useEffect,useState} from 'react'
 import Slider from 'react-slick'
 import styles from "./slider.module.css"
-import {BsCart,BsActivity , BsHeart , BsStar , BsStarHalf , BsStarFill} from "react-icons/bs"
+import {BsCart,BsActivity , BsStar  , BsStarFill} from "react-icons/bs"
 import { BASE_URL } from '@/utils/constans'
+import Bookmark from '@/Components/Global/Bookmark'
+import Rating from 'react-rating'
+import Link from 'next/link'
 
 const Slider4 = ({data,data1}) => {
   const [slids, setSlids] = useState([]);
   const [cats,setCats] = useState([]);
 
-  console.log(slids)
-//   console.log(cats)
-  
+
   useEffect(() => {
     
     let x = [];
@@ -100,28 +101,37 @@ const Slider4 = ({data,data1}) => {
             <Slider className={styles.xx}  {...settings}>
                 {
                     slids && slids.map((item,index) => 
-                    <div className={styles.mySli} key={index}>
+                    <div  className={styles.mySli} key={index}>
                         <div>
-                            <div className={styles.image}>
-                                <Image src={`${BASE_URL}${item.images[0]}`} fill alt={item.name} />
-                            </div>
-                            <Pricing price={item.priceAsli} discount={item.discount} />
-                            <div className={styles.name}>
-                                {item.p_name}
-                            </div>
+                            <Link href={`/product/${item._id}`}>
+                              <div className={styles.image}>
+                                  <Image src={`${BASE_URL}${item.images[0]}`} fill alt={item.name} />
+                              </div>
+                              <Pricing price={item.priceAsli} discount={item.discount} />
+                              <div className={styles.name}>
+                                  {item.p_name}
+                              </div>
+                            </Link>
 
                             <footer>
                                 <div className={styles.icons}>
                                     <span><BsCart /></span>
                                     <span><BsActivity /></span>
-                                    <span><BsHeart /></span>
+                                    <Bookmark productId={item._id} />
                                 </div>
                                 <div className={styles.stars}>
+                                    {/* <span><BsStar /></span>
                                     <span><BsStar /></span>
                                     <span><BsStar /></span>
                                     <span><BsStar /></span>
-                                    <span><BsStar /></span>
-                                    <span><BsStar /></span>
+                                    <span><BsStar /></span> */}
+                                    
+                                    <Rating
+                                      initialRating={item.rate}
+                                      emptySymbol={<BsStar style={{color:"gold"}} />}
+                                      fullSymbol={<BsStarFill style={{color:"gold"}} />}
+                                      readonly
+                                    />
                                 </div>
                             </footer>
                         </div>

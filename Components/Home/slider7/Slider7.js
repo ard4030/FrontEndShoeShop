@@ -2,7 +2,6 @@
 import React from 'react'
 import styles from "./slider.module.css"
 import {BsArchive} from "react-icons/bs"
-import {IoIosArrowBack} from "react-icons/io"
 import ItemComp from './ItemComp'
 
 const Slider7 = ({data}) => {

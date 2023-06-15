@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
 import styles from "./slider.module.css"
-import {BsPlusLg,BsCart,BsHeart,BsArrowLeftRight} from "react-icons/bs"
 import { BASE_URL } from '@/utils/constans'
 import { DateObject } from 'react-multi-date-picker'
 import persian from "react-date-object/calendars/persian"
@@ -17,7 +15,7 @@ const ItemComp = ({data,index}) => {
             <div className={styles.image}>
                 <Image
                 src={`${BASE_URL}${data.image}`}
-                fill
+                fill alt=""
                 />
             </div>
             <div className={styles.name}>

@@ -1,11 +1,12 @@
-import React from 'react'
+
 import styles from "./product.module.css"
 import {BiTask} from "react-icons/bi"
 import {BsCheck2Square , BsTruck , BsHeart} from "react-icons/bs"
 import {TbArrowsShuffle2} from "react-icons/tb"
 import Image from 'next/image'
+import ProductBookmark from './ProductBookmark'
 
-const Others = () => {
+const Others = ({data}) => {
   return (
     <div>
         <div className={styles.contOther}>
@@ -32,10 +33,7 @@ const Others = () => {
                 <span> مقایسه</span>
             </div>
 
-            <div>
-                <span><BsHeart /></span>
-                <span> افزودن به علاقه مندی ها</span>
-            </div>
+            <ProductBookmark productId={data._id} />
         </div>
 
         <div className={styles.tabl}>

@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Delete1 = ({width,height}) => {
   return (

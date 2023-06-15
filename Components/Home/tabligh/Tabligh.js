@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from "./tabligh.module.css"
 import {IoIosArrowBack} from "react-icons/io"
 

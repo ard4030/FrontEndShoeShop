@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import { useState } from "react";
 import SubMenuItem from "./SubMenuItem";
 
 const MenuItem = ({ title, subMenuItems = [] }) => {

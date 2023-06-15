@@ -1,11 +1,12 @@
 "use client"
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import style from "./header.module.css"
 import down from "../../public/images/down.png"
 import Image from 'next/image'
 import { BASE_URL } from '@/utils/constans'
-import {RiArrowLeftSLine , RiArrowUpSLine , RiArrowDownSLine} from "react-icons/ri"
+import {RiArrowLeftSLine} from "react-icons/ri"
 import Link from 'next/link'
+import axios from 'axios'
 
 
 const Menu = () => {
@@ -16,18 +17,15 @@ const Menu = () => {
     }, [])
 
     const getData = async () => {
-        const res = await fetch(`${BASE_URL}/user/category/getAllCategory`,{
-            headers :{"Content-Type": "application/json"},
-            cache:"no-store",
-            method:"GET"
-          })
-        const data = await res.json();
-
-        if(data && data.success){
-            setdata(data.data)
-        }else(
-            alert(data.message)
-        )
+        await axios.get(`${BASE_URL}/user/category/getAllCategory`).then((response => {
+            if(response.data.success){
+                setdata(response.data.data)
+            }else{
+                console.log(response.data.message)
+            }
+        })).catch(err => {
+            console.log(err.message)
+        })
         
     }
     

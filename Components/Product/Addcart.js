@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import styles from "./product.module.css"
 import {BsCartCheck , BsPlus , BsDash} from "react-icons/bs"
 import { CartContext } from '@/Context/CartContext'
 import { ProductCtx } from '@/Context/ProductContext'
 
 const Addcart = ({data}) => {
-    const {addToCart,getIsBasking,addCount,deleteCount} = useContext(CartContext)
+    const {addToCart,getIsBasking,addCount,deleteCount,setShow,show} = useContext(CartContext)
     const {active} = useContext(ProductCtx)
     let is  = getIsBasking(active);
 
@@ -16,15 +16,24 @@ const Addcart = ({data}) => {
             <div  className={styles.contCart1}>
                 <span><BsCartCheck /></span>
                 <span className={styles.ising}>
-                    <button onClick={() => {addCount(active && active.addonItem,data._id)}}><BsPlus /></button>
+                    <button onClick={() => {
+                        addCount(active && active.addonItem,data._id);
+                        setShow(true)
+                    }}><BsPlus /></button>
                     <span>{is.count}</span>
-                    <button onClick={() => {deleteCount(active && active.addonItem,data._id)}}><BsDash /></button>
+                    <button onClick={() => {
+                        deleteCount(active && active.addonItem,data._id);
+                        setShow(true)
+                    }}><BsDash /></button>
                 </span>
             </div>
             
             :
 
-            <div onClick={() => {addToCart(active && active)}} className={styles.contCart}>
+            <div onClick={() => {
+                addToCart(active && active);
+                setShow(true)
+                }} className={styles.contCart}>
                 <span><BsCartCheck /></span>
                 <span>افزودن به سبد خرید</span>
             </div>

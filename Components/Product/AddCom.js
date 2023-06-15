@@ -1,5 +1,5 @@
 "use client"
-import React,{useContext, useState} from 'react'
+import {useContext, useState} from 'react'
 import StarRating from './StarRating'
 import { Slider } from 'antd'
 import {BiPlus} from "react-icons/bi"
@@ -11,7 +11,7 @@ import { BASE_URL } from '@/utils/constans'
 
 const AddCom = ({data}) => {
     console.log(data)
-    const {user} = useContext(AuthContext)
+    const {user,setViewLogin} = useContext(AuthContext)
     const [myData,setMydata] = useState({
         rating:0,
         keyfiat:0,
@@ -173,7 +173,7 @@ const AddCom = ({data}) => {
 
         <div className={styles.comenting}>
                <p>دیدگاه خود را بنویسید</p>
-               <div className={styles.unreg}>
+               <div onClick={() => {setViewLogin(true)}} className={styles.unreg}>
                     <p>
                     برای ثبت دیدگاه، لازم است ابتدا وارد حساب کاربری خود شوید. اگر این محصول را قبلا از این فروشگاه خریده باشید، دیدگاه شما به عنوان مالک محصول ثبت خواهد شد.
                     </p>

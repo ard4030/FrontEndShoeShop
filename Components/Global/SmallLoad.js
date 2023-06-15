@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import styles from "./global.module.css"
 import myload from "../../public/images/load.gif"
 

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Heading from './Heading'
 import styles from "./product.module.css"
 import{BiMessageSquareDetail} from "react-icons/bi"

@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import Call from './Call'
 import style from "./header.module.css"
 import Menu from './Menu'

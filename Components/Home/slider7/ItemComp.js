@@ -8,7 +8,7 @@ const ItemComp = ({data,index}) => {
   return(
     <div key={index} className={styles.item}>
         <div className={styles.imaging}>
-            <Image src={data.image} fill />
+            <Image src={data.image} fill alt="" />
         </div>
 
         <div className={styles.lefting}>

@@ -1,9 +1,7 @@
 "use client"
 import { ProductCtx } from '@/Context/ProductContext'
-// import { CartContext } from '@/context/Cart/CartContext'
 import { useContext } from 'react'
 import style from './product.module.css'
-import {BsCheckLg} from "react-icons/bs"
 
 const Attr = ({title,value,index1}) => {
     const {active,changeActive,basking} = useContext(ProductCtx)

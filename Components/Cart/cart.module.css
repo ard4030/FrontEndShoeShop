@@ -1,182 +1,241 @@
-.contItem{
-    padding: 10px;
-    margin-bottom: 0px;
+.btHead{
     display: flex;
     align-items: center;
-    border: 1px solid #f4f4f4;
+    justify-content: space-between;
+    width: 103px;
+    height: 34px;
+    background: #0183ff;
+    font-size: 12px;
+    color: #fff;
+    padding: 0 11px;
+    border-radius: 5px;
 }
 
-.contItem > div:nth-child(1){
-    width: 10%;
-}
-
-.contItem > div:nth-child(2){
-    width: 30%;
-}
-
-.contItem > div:nth-child(3){
-    width: 30%;
-}
-
-.contItem > div:nth-child(4){
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.contItem > div:nth-child(5){
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.titles > span{
-    display: block;
-    width: 100%;
+.btHead > span:last-child{
+    background: #fff;
+    padding: 1px 8px;
+    color: #555;
+    border-radius: 5px;
     font-family: inum;
 }
 
-.titles > span:nth-child(2){
-    color: #b7b3b3;
+.content{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.titles > span:nth-child(3){
-    font-family: inum;
-}
-
-.modes > div > span:nth-child(1){
-    padding: 5px;
-    font-family: ireg;
-    font-size: 14px;
-    color: #a7a7a7;
+.content > div{
+    padding: 15px;
     background: #fff;
+    border-radius: 7px;
 }
 
-.modes > div > span:nth-child(2){
-    padding: 5px;
-    font-family: ireg;
-    font-size: 14px;
-    background: #fff;
+.content > div:first-child{
+    width: 71%;
 }
 
-.modes > div > span:nth-child(3){
-    width: 20px;
-    height: 20px;
-    display: block;
-    border-radius: 100%;
-    margin-right: 5px;
+.content > div:last-child{
+    width: 22%;
+    height: max-content;
 }
 
-.modes > div {
-    margin: 10px 0;
+.tableItems table{
+    width: 100%;
+    font-size: 12px;
+    border: 1px solid #eee;
+    border-radius: 7px;
+}
+
+.tableItems table  td{
+    padding: 17px 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.tableItems table tbody tr:last-child td{
+    border-bottom: none;
+}
+
+.tt1{
+    color: #555;
+    margin-left: 5px;
+}
+
+.tt2{
+    margin-left: 5px;
+}
+
+.tt3{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100px;
+    position: relative;
+    top: 2px;
+}
+
+.addonItem{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
-.change {
-    width: 100%;
-    background: #f6f6f6;
-    border-radius: 3px;
+.addonItem > div{
+    margin-left: 10px;
+    background: #eee;
+    padding: 1px 8px;
+    border-radius: 4px;
+    margin-bottom: 7px;
+    font-size: 10px;
+}
+
+.conting{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
-}
-
-.change button{
-    border: none;
-padding: 10px 13px;
-background: #fff;
-cursor: pointer;
-}
-
-.table{
-    width: 100%;
-font-family: ireg;
-font-weight: 400;
-}
-
-.table th{
-    font-family: ireg;
-    font-weight: 400;
-}
-
-.table tbody td{
-    border-bottom: 2px solid #ececec;
-}
-
-.table thead{
-    background: #eee;
-}
-
-.pname{
-    width: 100%;
-    display: block;
-    font-size: 15px;
+    width: 75px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    font-size: 12px;
     font-family: inum;
+    /* padding: 3px 11px; */
 }
 
-.ename{
-    width: 100%;
-    display: block;
-    font-size: 13px;
-    font-family: inum;
-}
-
-.attr{
+.conting > div{
     display: flex;
-align-items: center;
-}
-
-.itemAt{
-    margin-left: 20px;
-    font-size: 14px;
-    color: #afafaf;
-    display: flex;
+    height: 100%;
     align-items: center;
 }
 
-.itemAt > span:nth-child(2){
+.conting > div > span{
+    background: #eee;
+    width: 18px;
+    height: 20px;
+    margin-right: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.conting > div > span:hover{
+    background: #ccc;
+}
+
+.conting > span{
+    margin-left: 13px;
+}
+
+.contTakhfif{
+    border: 1px solid #eee;
+    padding: 33px 19px;
+    margin-top: 31px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.lblTakhfif{
+    position: absolute;
+    font-size: 12px;
+    color: #555;
+    top: -14px;
+    background: #fff;
+    z-index: 2;
+    padding: 4px 35px;
+}
+
+.contTakhfif > div{
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #eee;
+border-radius: 5px;
+padding: 4px;
+}
+
+.contTakhfif > div > input{
+    width: 83%;
+    border: none;
+    padding: 2px 10px;
+    height: 26px;
+}
+
+.contTakhfif > div > span{
+    background: #9e9e9e;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.contTakhfif > div > span:hover{
+    background: #0183ff;
+    color: #fff;
+}
+
+.oth1{
+    font-size: 12px;
+    position: relative;
+    padding-right: 17px;
+}
+
+.oth1::before{
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 100px;
+    background: #e0e0e0;
+}
+
+.takhP{
+    background-color: #717171;
+    color: #FFF !important;
+    font-size: 12px !important;
+    padding: 0px 15px;
+    border-radius: 0 10px 10px 7px;
+    font-family: inum;
+}
+
+.takhP > span:first-child{
+    font-size: 12px;
+}
+
+.takhP > span:last-child{
+    font-size: 10px;
     margin-right: 5px;
 }
 
-.itemAt > span:nth-child(3){
-    width: 15px;
-height: 15px;
-display: inline-block;
-margin-right: 6px;
-border-radius: 100%;
-}
-
-.pricing{
-    text-align: center;
-font-family: inum;
-
-}
-
-.pricing h5{
-    font-weight: 400;
-}
-
-.fooTit span{
-    display: block;
-    color: #8a8a8a;
-    font-family: inum;
-    font-size: 16px;
-}
-
-.contFoo{
+.btnNext{
+    background: #0183ff;
+    color: #fff;
+    margin-top: 21px;
     display: flex;
-width: 44%;
-justify-content: left;
-background: #eee;
-margin-top: 10px;
-padding: 15px 0;
-border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 11px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s all;
 }
 
-.contFoo > div{
-    width: 48%;
+.btnNext > span{
+    color: #fff;
+    position: absolute;
+    left: 7px;
+    top: 14px;
 }
+
+.btnNext > span > svg:last-child{
+    position: relative;
+    right: -7px;
+}
+

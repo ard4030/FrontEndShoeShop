@@ -1389,3 +1389,168 @@ color: #555;
   cursor: pointer;
   transition: 0.3s all;
 }
+
+/* CArt View */
+
+.cartView{
+  background: #605c5c70;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: 0.5s all;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.childCartView{
+  width: 21%;
+  height: 100%;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.closing{
+  width: 79%;
+  height: 100%;
+}
+
+.headViewCart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: inum;
+  font-size: 12px;
+  padding-top: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #dad9d9;
+}
+
+.countO{
+  background: gold;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.cartImage{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.childCartView ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.childCartView li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.contingCart{
+  width: 75%;
+  font-size: 11px;
+}
+
+.lblprice{
+  font-family: inum;
+margin-left: 5px;
+font-size: 12px;
+color: #0183ff;
+}
+
+.myCounting{
+  width: 85px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-family: inum;
+}
+
+
+
+.myCounting > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.myCounting > span:nth-child(1){
+  width: 38%;
+}
+
+.myCounting > span:nth-child(2){
+  width: 38%;
+}
+
+.myCounting > span:nth-child(3){
+  width: 24%;
+}
+
+.delIt{
+  background: white;
+  width: 16px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  color: #bc5959;
+  border-radius: 12px;
+  font-size: 29px;
+  cursor: pointer;
+}
+
+.result{
+  background: #eaeaec;
+  position: fixed;
+  width: 19%;
+  bottom: 0;
+  padding: 15px;
+}
+
+
+.botCartView{
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.botCartView > div{
+  width: 45%;
+  background: #f5f5f5;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: inum;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.botCartView > div:hover{
+  background: #0183ff;
+  color: #fff;
+}

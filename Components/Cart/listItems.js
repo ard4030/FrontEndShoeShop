@@ -3,9 +3,8 @@
 import { CartContext } from '@/Context/CartContext'
 import { BASE_URL } from '@/utils/constans'
 import Image from 'next/image'
-import { useContext , useEffect } from 'react'
+import { useContext } from 'react'
 import Loading from '../Global/Loading'
-
 import Delete from '../icons/Delete'
 import Mines from '../icons/Mines'
 import Plus from '../icons/Plus'
@@ -47,7 +46,7 @@ const ListItems = ({data}) => {
                         return <tr key={index}>
                         <td>
                             <div className='flex-center'>
-                                {console.log(item.image[0].images[0])}
+                             
                                 <Image width={100} height={100} alt='' src={`${item.image[0] && item.image[0].images && item.image[0].images.length > 0  && BASE_URL+item.image[0].images[0]}`} />
                             </div>
                         </td>

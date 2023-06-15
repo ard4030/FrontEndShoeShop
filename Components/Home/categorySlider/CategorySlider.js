@@ -1,5 +1,4 @@
 "use client"
-import React from 'react'
 import Slider from 'react-slick';
 import styles from './category.module.css'
 import { GrPrevious } from "react-icons/gr"
@@ -45,7 +44,7 @@ const CategorySlider = ({data}) => {
             <div key={index} className={styles.item}>
                 <div className={styles.item1}>
                     <div className={styles.image}>
-                      <Image src={`${BASE_URL}${item.image}`} fill />
+                      <Image src={`${BASE_URL}${item.image}`} fill alt="" />
                     </div>
                     <div className={styles.title}>{item.title}</div>
                     <div className={styles.count}>+10 محصول</div>

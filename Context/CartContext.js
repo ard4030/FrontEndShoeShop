@@ -9,6 +9,8 @@ export const CartContext = createContext();
 export function CartWrapper({ children }) {
     const [cart, setCart] = useState([])
     const [loading, setLoading] = useState(false)
+    const [show, setShow] = useState(false)
+
 
     const getCart = async () => {
         await axios.post(`${BASE_URL}/user/cart/getCart`,null,{withCredentials:true}).then(response => {
@@ -41,7 +43,6 @@ export function CartWrapper({ children }) {
         setLoading(true)
         await axios.post(`${BASE_URL}/user/cart/addToCart`,data,{withCredentials:true}).then(response => {
             if(response.data.success){
-                alert(response.data.message)
                 getCart()
             }else{
                 alert(response.data.message)
@@ -54,7 +55,6 @@ export function CartWrapper({ children }) {
 
     const addCount = async (data,productId) => {
         setLoading(true)
-        
         await axios.post(`${BASE_URL}/user/cart/addQuantity`,{addonItem:data,productId},{withCredentials:true}).then(response => {
             if(response.data.success){
                 getCart()
@@ -88,12 +88,20 @@ export function CartWrapper({ children }) {
         })
         setLoading(false)
     }
+
+    const getCartPrice = () => {
+        let x = 0;
+        cart.map(item => {
+            x = x + parseInt(item.totalPrice)
+        })
+        return x
+    }
     
     
 
   return (
     <CartContext.Provider value={{
-        cart,addToCart,getCart,addCount,deleteCount,loading,deleteItem,getIsBasking
+        cart,addToCart,getCart,addCount,deleteCount,loading,deleteItem,getIsBasking,show,setShow,getCartPrice
         }}>
       {children}
     </CartContext.Provider>

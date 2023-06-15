@@ -1,7 +1,7 @@
 "use client"
 import { BASE_URL } from '@/utils/constans';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Slider from 'react-slick';
 import styles from './product.module.css';
 import {BsInfoCircle} from "react-icons/bs"
@@ -15,7 +15,7 @@ const Gallery = ({ images }) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: (images.length < 4) ? images.length : 4,
     slidesToScroll: 1,
     nextArrow: <></>,
     prevArrow : <></> 
@@ -32,7 +32,7 @@ const Gallery = ({ images }) => {
             images.map((item,index) => 
             <div onClick={() => setActive(item)} className={styles.conting}>
                 <div className={`${styles.sliImage} ${active === item && styles.actItem}`} key={index}>
-                    <Image src={`${BASE_URL}${item}`} fill={true}  />
+                    <Image src={`${BASE_URL}${item}`} fill={true} alt="" />
                 </div>
             </div>
             )

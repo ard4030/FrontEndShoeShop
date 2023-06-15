@@ -21,3 +21,259 @@ background: #0f0f0f5c;
     height: 50px;
     position: relative;
 }
+
+.book{
+    cursor: pointer;
+}
+
+/* Login */
+.contLogin{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #8181816e;
+    position: fixed;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.childLigib{
+    padding: 25px;
+    width: 30%;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #a8a8a8;
+    position: relative;
+}
+
+.topImage{
+    position: relative;
+    width: 170px;
+    height: 170px;
+    display: block;
+    margin: auto;
+}
+
+.inputContMobile{
+    position: relative;
+    width: 48%;
+    margin: auto;
+      margin-top: auto;
+    display: block;
+    margin-top: 15px;
+    height: 20px;
+}
+
+.inputContMobile > input{
+    padding: 6px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 91%;
+    height: 100%;
+    border-radius: 16px;
+    box-shadow: none;
+    border: 1px solid #e1e1e1;
+    text-align: center;
+    font-family: inum;
+    font-size: 17px;
+    color: #737377;
+    letter-spacing: 2px;
+}
+
+.btnSendSms{
+    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  margin-top: 36px;
+  margin-bottom: 20px;
+  display: block;
+  padding: 10px 31px;
+  background: #0081fd;
+  color: #fff;
+  font-family: ireg;
+  border: none;
+  border-radius: 34px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.btnSendSms:hover{
+    transform: translateY(2%);
+    background: #066bca;
+}
+
+.cls{
+    width: 18px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.iptOtp > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    direction: ltr;
+    margin-top: 20px;
+}
+
+.iptOtp > div input {
+    text-align: center!important;
+    width: 50px!important;
+    height: 50px!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    font-family: inum!important;
+    background: #eee!important;
+    border: none!important;
+    border-radius: 6px!important;
+}
+
+.bading{
+    background: red;font-size: 12px;
+    font-family: ilight;
+    text-align: center;
+    width: max-content;
+    margin: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 2px 17px;
+    border-radius: 100px;
+    background: #fff7ee;
+    color: #db7400;
+    cursor: pointer;
+}
+
+/* Head Cart */
+
+.headCartContent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+}
+
+.headCartContent::before{
+    position: absolute;
+    left: -3px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background: #d5d7dc;
+    content: "";
+}
+
+.headCartContent::after{
+    position: absolute;
+    right: -3px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100px;
+    background: #d5d7dc;
+    content: "";
+}
+
+.orderStep::before{
+    width: 100%;
+    height: 4px;
+    background: #d5d7dc;
+    top: 23px;
+    left: 0;
+    position: absolute;
+    content: "";
+}
+
+.orderStep{
+    position: relative;
+}
+
+.itemStep{
+    position: relative;
+    z-index: 2;
+}
+
+.itemStep > span:first-child{
+    background: #fff;
+    width: 40px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 17px #d8d8d8;
+    margin: auto;
+    color: #bcbcbc;
+}
+
+.itemStep > span:last-child{
+    font-size: 12px;
+    color: #999;
+}
+
+.pkl{
+    background: #f3f3f4;
+  margin-top: 13px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-family: inumlight;
+  padding: 5px 11px;
+  }
+  
+  .pkl > div:nth-child(1){display: flex;width: 80%;} 
+  
+  .pkl > div:nth-child(2){
+    position: relative;
+    width: 17%;
+    justify-content: right;
+    display: flex;
+    background: #717171;
+    border-radius: 100px;
+    padding: 1px 0px;
+    padding-right: 0px;
+    color: #fff;
+    padding-right: 7px;
+  } 
+  
+  .pkl > div:nth-child(2) > span:last-child{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #f44336;
+    height: 100%;
+    width: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+  }
+  
+  .pkl > div:nth-child(3){
+    width: 100%;
+  height: 4px;
+  background: #4caf50;
+  margin-top: 10px;
+  border-radius: 5px;
+  margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  } 
+  
+

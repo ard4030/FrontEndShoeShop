@@ -1,8 +1,8 @@
 import Image from 'next/image'
-import React from 'react'
 import styles from "./slider.module.css"
 import {BsPlusLg,BsCart,BsHeart,BsArrowLeftRight} from "react-icons/bs"
 import { BASE_URL } from '@/utils/constans'
+import Link from 'next/link'
 
 const ItemComp = ({data,index}) => {
 
@@ -38,12 +38,12 @@ const ItemComp = ({data,index}) => {
   }
 
   return(
-    <div key={index} className={styles.item}>
+    <Link href={`/product/${data._id}`} key={index} className={styles.item}>
         <div>
             <div className={styles.image}>
                 <Image
                 src={`${BASE_URL}${data.images[0]}`}
-                fill
+                fill alt=""
                 />
             </div>
             <div className={styles.name}>
@@ -71,7 +71,7 @@ const ItemComp = ({data,index}) => {
                 
             </div>
         </div>
-    </div>
+    </Link>
   )
 }
 

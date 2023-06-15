@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import styles from "./product.module.css"
 import Rating from 'react-rating';
 import {BsStar,BsStarFill} from "react-icons/bs"

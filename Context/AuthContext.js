@@ -10,11 +10,13 @@ export function AuthWrapper({ children }) {
     const [isSend, setIsSend] = useState(false)
     const [mobile, setMobile] = useState(false)
     const [user, setUser] = useState(false)
+    const [viewLogin, setViewLogin] = useState(false)
+
 
     const isLog = async() => {
       await axios.get(`${BASE_URL}/auth/isLogin`,{withCredentials:true}).then(response => {
           if(response.data.success){
-            setUser(true)
+            setUser(response.data.user)
           }else{
             setUser(false)
           }
@@ -50,11 +52,14 @@ export function AuthWrapper({ children }) {
     }
 
 
+
+
   return (
     <AuthContext.Provider value={{
         isSend,setIsSend,
         mobile, setMobile,
-        user,logOut,isLog
+        user,logOut,isLog,
+        viewLogin,setViewLogin
         }}>
       {children}
     </AuthContext.Provider>

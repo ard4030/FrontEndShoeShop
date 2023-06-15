@@ -1,13 +1,8 @@
 
 import MySlider from "@/Components/Home/MySlider/MySlider";
-import ListItems from "@/Components/Home/listitems/listItems";
 import SliderLeft from "@/Components/Home/sliderTopLeft/Slider";
 import { BASE_URL } from "@/utils/constans"
-import slider1 from "../public/images/slider1.webp"
-import slider2 from "../public/images/slider2.webp"
-import slider3 from "../public/images/slider3.webp"
 import CategorySlider from "@/Components/Home/categorySlider/CategorySlider";
-import {CiBank,CiBaseball,CiBowlNoodles,CiCoffeeCup,CiDeliveryTruck} from "react-icons/ci"
 import Slider4 from "@/Components/Home/slider4/Slider4";
 import Slider5 from "@/Components/Home/slider5/Slider5";
 import Slider6 from "@/Components/Home/slider6/Slider6";
@@ -30,50 +25,7 @@ export default async function Home(props) {
   })
   const data = await res.json();
 
-  const sl5Data = [
-    {
-      id:1,
-      name:"لپ تاپ 17 اينچي ام اس آي مدل GS72 6QE Stealth Pro",
-      discount:2000000,
-      price:2300000,
-      perc:"10%",
-      vizh:[
-        {name:"نعدادسیم کارت",value:" 2 سیم کارت"},
-        {name:"دوربین",value:"48 مگاپیکسل"},
-        {name:"حافظه داخلی",value:"64 گیگابایت"},
-        {name:"مقدار رم",value:"3 گیگ"},
-      ],
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2018/10/pocox3-550x550.webp"
-    },
-    {
-      id:2,
-      name:"لپ تاپ 15 اينچي لنوو مدل Ideapad 320 – H",
-      discount:2000000,
-      price:2300000,
-      perc:"4%",
-      vizh:[
-        {name:"نعدادسیم کارت",value:" 2 سیم کارت"},
-        {name:"دوربین",value:"48 مگاپیکسل"},
-        {name:"حافظه داخلی",value:"64 گیگابایت"},
-        {name:"مقدار رم",value:"3 گیگ"},
-      ],
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2019/03/aplle-550x550.webp"
-    },
-    {
-      id:3,
-      name:"گوشی موبایل اپل مدل iPhone 12 A2404 دو سیم‌ کارت ظرفیت 128 گیگابایت",
-      discount:2000000,
-      price:2300000,
-      perc:"20%",
-      vizh:[
-        {name:"نعدادسیم کارت",value:" 2 سیم کارت"},
-        {name:"دوربین",value:"48 مگاپیکسل"},
-        {name:"حافظه داخلی",value:"64 گیگابایت"},
-        {name:"مقدار رم",value:"3 گیگ"},
-      ],
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2017/10/1-5-600x600.jpg"
-    }
-  ]
+  
 
   const mostSale = [
     {
@@ -126,39 +78,10 @@ export default async function Home(props) {
     },
   ]
 
-  const danesh = [
-    {
-      id:1,
-      title:"فوکوس ۹: جنگ جهانی دوم به روایت سازندگان Call of Duty WWII",
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2018/07/maxresdefault-256x170.webp"
-    },
-    {
-      id:2,
-      title:"تاثیر هوش مصنوعی بر بازاریابی دیجیتال",
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2018/07/ai-256x170.webp"
-    },
-    {
-      id:3,
-      title:"“قدر تو را می‌دانم”، یک شب مادرانه و دلچسب",
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2018/07/mother-256x170.webp"
-    },
-    {
-      id:4,
-      title:"پیوند فوتبال و تکنولوژی در جام جهانی 2018 روسیه",
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2018/07/var-256x170.webp"
-    },
-    {
-      id:5,
-      title:"تاثیر هوش مصنوعی بر بازاریابی دیجیتال",
-      image:"https://demos.mahdisweb.net/digiland/wp-content/uploads/2018/07/ai-256x170.webp"
-    },
-  ]
-
   
   return (
     <div className="container">
 
-      {/* Top Sliders */}
       <div className="flex-between">
         <div className="compRight">
            {data && <MySlider data={data.data.SliderTop}  />}
@@ -168,7 +91,6 @@ export default async function Home(props) {
         </div>
       </div>
 
-      {/* Category Slider */}
       <div className="catslider">
         {data && <CategorySlider data={data.data.Categorys} />}
       </div>
@@ -179,7 +101,7 @@ export default async function Home(props) {
          </div> 
 
          <div className="sec3Left">
-            {data && <Slider5 slides={sl5Data} data1={data.data.ShegeftSlider} />} 
+            {data && <Slider5  data1={data.data.ShegeftSlider} />} 
          </div>
       </div>
 
@@ -200,7 +122,6 @@ export default async function Home(props) {
           {data && <Slider8  data={data.data.SliderArticle} />} 
       </div>
 
-      {/* <ListItems data={data.data} /> */}
     </div>
   )
 }

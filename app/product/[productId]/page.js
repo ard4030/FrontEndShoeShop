@@ -1,8 +1,7 @@
+
 import ProductView from '@/Components/Product/ProductView'
 import { BASE_URL } from '@/utils/constans'
 import axios from 'axios'
-import React from 'react'
-
 
 export const metadata = {
   title: 'صفحه محصول',

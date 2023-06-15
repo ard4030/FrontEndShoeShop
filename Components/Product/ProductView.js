@@ -1,9 +1,8 @@
 "use client"
 import { CartContext } from '@/Context/CartContext';
 import { ProductCtx } from '@/Context/ProductContext'
-import React,{useContext, useEffect} from 'react'
+import {useContext, useEffect} from 'react'
 import SmallLoad from '../Global/SmallLoad';
-import ImageCom from '../Home/listitems/imageCom';
 import Addcart from './Addcart';
 import Attr from './Attr';
 import Brands from './Brands';
@@ -72,7 +71,7 @@ const ProductView = ({data}) => {
 
           <div>
             <Brands data={data} />
-            <Others />
+            <Others data={data} />
           </div>
         </div>
       </div>
@@ -86,13 +85,3 @@ const ProductView = ({data}) => {
 
 export default ProductView
 
-          {/* <div>
-            <h2>{data.p_name}</h2>
-            <ImageCom pic={data.images} />
-            {
-              data && data.addonItem.map((item,index) => 
-              <Attr key={index} title={item.title} value={item.specs} index1={index} />
-              )
-            }
-            <Btns />  
-          </div> */}

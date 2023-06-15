@@ -1,5 +1,4 @@
 "use client"
-import React from 'react';
 import { useTimer } from 'react-timer-hook';
 import styles from "./slider5.module.css"
 

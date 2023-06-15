@@ -1,6 +1,5 @@
 "use client"
 import style from "./listitems.module.css";
-import {useEffect,useState} from 'react'
 
 const ColorCom = ({colors}) => {
 

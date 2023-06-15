@@ -1,5 +1,5 @@
 "use client"
-import React,{useState} from 'react'
+import {useState} from 'react'
 import CommentUsers from './CommentUsers'
 import Moshakhasat from './Moshakhasat'
 import Naghd from './Naghd'

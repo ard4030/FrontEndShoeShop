@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Rating from 'react-rating';
 import {BsStar,BsStarFill} from "react-icons/bs"
 

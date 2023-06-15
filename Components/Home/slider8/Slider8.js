@@ -1,7 +1,6 @@
 "use client"
-import React from 'react'
+
 import styles from "./slider.module.css"
-import {BsCartPlus} from "react-icons/bs"
 import {IoIosArrowBack} from "react-icons/io"
 import Slider from 'react-slick'
 import ItemComp from './ItemComp'

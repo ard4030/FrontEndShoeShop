@@ -66,7 +66,10 @@ align-items: center;
 }
 
 /* Slider */
-
+.item{
+  text-decoration: none;
+  color: inherit;
+}
 
 .item > div{
     margin: 10px;

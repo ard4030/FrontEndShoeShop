@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import React from "react";
 import Slider  from "react-slick";
 import styles from "./myslider.module.css"
 import { GrPrevious } from "react-icons/gr"
@@ -44,7 +43,7 @@ const MySlider = ({data}) => {
       {
         data.map((item,index) => 
         <div className={styles.mySli} key={index}>
-          <Image style={{boxShadow:"0px 0px 10px #d2cfcf"}} src={`${BASE_URL}${item.image}`} fill={true}  />
+          <Image style={{boxShadow:"0px 0px 10px #d2cfcf"}} src={`${BASE_URL}${item.image}`} fill={true} alt="" />
         </div>
         )
       }

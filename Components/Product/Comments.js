@@ -1,4 +1,3 @@
-import React from 'react'
 import styles from "./product.module.css"
 import { BsSortDown , BsStar } from "react-icons/bs"
 import {BiLike} from "react-icons/bi"

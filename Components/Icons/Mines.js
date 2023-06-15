@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Mines = ({width,height}) => {
   return (

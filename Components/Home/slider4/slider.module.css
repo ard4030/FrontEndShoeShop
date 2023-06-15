@@ -87,6 +87,12 @@
     height: 335px;
 }
 
+.mySli{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .mySli > div{
     background: #fff;
     height: 100%;
@@ -96,7 +102,18 @@
     border-radius: 10px;
     height: 335px;
     flex-wrap: wrap;
+
 }
+
+.mySli > div > a{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: inherit;
+}
+
+
 
 .price{
     display: flex;
@@ -170,6 +187,7 @@ overflow: hidden;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    padding: 1px;
   }
 
   .icons > span > svg{

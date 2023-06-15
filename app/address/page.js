@@ -3,7 +3,7 @@
 import AddressList from '@/Components/Address/AddressList';
 import { BASE_URL } from '@/utils/constans';
 import axios from 'axios';
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 
 export const metadata = {
     title: 'انتخاب آدرس',

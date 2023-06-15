@@ -1,4 +1,4 @@
-import React from 'react'
+
 import styles from "./product.module.css"
 
 const Heading = ({icon,title,e_name}) => {

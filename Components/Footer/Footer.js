@@ -26,37 +26,37 @@ const Footer = () => {
       <div className="container">
         <div className={styles.cont}>
             <div className={styles.item}>
-                <div className={styles.image}> <Image src={fo1} fill /></div>
+                <div className={styles.image}> <Image src={fo1} fill alt="" /></div>
                 <span>تحویل اکسپرس</span>
             </div>
 
             <div className={styles.item}>
-                <div className={styles.image}> <Image src={fo2} fill /></div>
+                <div className={styles.image}> <Image src={fo2} fill alt="" /></div>
                 <span>ضمانت بازگشت</span>
             </div>
 
             <div className={styles.item}>
-                <div className={styles.image}> <Image src={fo3} fill /></div>
+                <div className={styles.image}> <Image src={fo3} fill alt="" /></div>
                 <span>پرداخت در محل</span>
             </div>
 
             <div className={styles.item}>
-                <div className={styles.image}> <Image src={fo4} fill /></div>
+                <div className={styles.image}> <Image src={fo4} fill alt="" /></div>
                 <span>تضمین بهترین قیمت</span>
             </div>
 
             <div className={styles.item}>
-                <div className={styles.image}> <Image src={fo5} fill /></div>
+                <div className={styles.image}> <Image src={fo5} fill alt="" /></div>
                 <span>ضمانت اصل بودن</span>
             </div>
 
             <div className={styles.item}>
-                <div className={styles.image}> <Image src={fo6} fill /></div>
+                <div className={styles.image}> <Image src={fo6} fill alt="" /></div>
                 <span>ارسال به تمام نقاط</span>
             </div>
 
             <div className={styles.item}>
-                <div className={styles.image}> <Image src={fo7} fill /></div>
+                <div className={styles.image}> <Image src={fo7} fill alt="" /></div>
                 <span>بسته بندی زیبا</span>
             </div>
         </div>
@@ -93,11 +93,11 @@ const Footer = () => {
 شرکت طراحی سایت ماهدیس وب با طراحی چندین سایت اینترنتی در زمینه های طراحی سایت با بهره گیری از بروزترین تکنولوژی های طراحی سایت ، سئو و بهینه سازی سایت با افتخار در کنار شماست.
             </p>
             <div className={styles.imager}>
-              <div className={styles.parImage}><Image fill src={lg1} /></div>
-              <div className={styles.parImage}><Image fill src={lg2} /></div>
-              <div className={styles.parImage}><Image fill src={lg3} /></div>
-              <div className={styles.parImage}><Image fill src={lg4} /></div>
-              <div className={styles.parImage}><Image fill src={lg5} /></div>
+              <div className={styles.parImage}><Image fill src={lg1} alt="" /></div>
+              <div className={styles.parImage}><Image fill src={lg2} alt="" /></div>
+              <div className={styles.parImage}><Image fill src={lg3} alt="" /></div>
+              <div className={styles.parImage}><Image fill src={lg4} alt="" /></div>
+              <div className={styles.parImage}><Image fill src={lg5} alt="" /></div>
             </div>
           </div>
 

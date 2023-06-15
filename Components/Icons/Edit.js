@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Edit = ({width,height}) => {
   return (

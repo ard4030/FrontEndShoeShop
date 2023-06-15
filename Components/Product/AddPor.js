@@ -2,7 +2,7 @@
 import { AuthContext } from '@/Context/AuthContext';
 import { BASE_URL } from '@/utils/constans';
 import axios from 'axios';
-import React, { useContext , useState , useEffect} from 'react'
+import { useContext , useState , useEffect} from 'react'
 import SmallLoad from '../Global/SmallLoad';
 import styles from "./product.module.css"
 import { DateObject } from 'react-multi-date-picker'
