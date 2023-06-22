@@ -11,14 +11,16 @@ import SmallLoad from '../Global/SmallLoad'
 import axios from 'axios'
 import { BASE_URL } from '@/utils/constans'
 import { AddressContext } from '@/Context/AddressContext'
+import { AuthContext } from '@/Context/AuthContext'
+import { PaymentContext } from '@/Context/PaymentContext'
 
 const Addresses = () => {
   const {active,setActive,setShow,show} = useContext(AddressContext)
+  const {user} = useContext(AuthContext)
   const [data, setData] = useState([]);
   const [loading, setloading] = useState(false);
+  const {setMyOrder,myOrder} = useContext(PaymentContext)
 
-
-  
 
   const getAddress = async () => {
     setloading(true)
@@ -26,8 +28,9 @@ const Addresses = () => {
       if(response.data.success){
         setData(response.data.data)
         setActive(response.data.data[0])
+        setMyOrder({...myOrder,addressId:response.data.data[0]._id})
       }else{
-        alert(response.data.message)
+        // alert(response.data.message)
       }
     }).catch(err => {
       console.log(err.message)
@@ -37,7 +40,7 @@ const Addresses = () => {
 
   useEffect(() => {
     getAddress()
-  }, [])
+  }, [user])
 
   return (
     <div className={`${styles.modalAddress} ${!show && "dnone"}` }>
@@ -65,6 +68,7 @@ const Addresses = () => {
                         data.length > 0 && data.map((item,index) => 
                         <div key={index} onClick={() => {
                           setActive(item)
+                          setMyOrder({...myOrder,addressId:item._id})
                           setShow(false)
                           }} className={styles.subItems}>
                           <span className={`${item._id === active._id && styles.actItem}`}></span>

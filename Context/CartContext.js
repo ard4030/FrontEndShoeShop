@@ -11,8 +11,8 @@ export function CartWrapper({ children }) {
     const [loading, setLoading] = useState(false)
     const [show, setShow] = useState(false)
 
-
     const getCart = async () => {
+        setLoading(true)
         await axios.post(`${BASE_URL}/user/cart/getCart`,null,{withCredentials:true}).then(response => {
             if(response.data.success){
                 setCart(response.data.data)
@@ -22,6 +22,7 @@ export function CartWrapper({ children }) {
         }).catch(err => {
             alert(err.message)
         })
+        setLoading(false)
     }
 
     useEffect(() => {
@@ -96,12 +97,11 @@ export function CartWrapper({ children }) {
         })
         return x
     }
-    
-    
+
 
   return (
     <CartContext.Provider value={{
-        cart,addToCart,getCart,addCount,deleteCount,loading,deleteItem,getIsBasking,show,setShow,getCartPrice
+        cart,addToCart,getCart,addCount,deleteCount,loading,deleteItem,getIsBasking,show,setShow,getCartPrice,
         }}>
       {children}
     </CartContext.Provider>

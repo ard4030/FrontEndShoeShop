@@ -27,7 +27,7 @@ const Slider7 = ({data}) => {
         <div className={styles.conting}>
             {
               data.map((item,index) => 
-                <ItemComp data={item} index={index} />
+                <ItemComp key={index} data={item} index={index} />
               )
             }
         </div>

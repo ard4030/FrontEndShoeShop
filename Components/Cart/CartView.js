@@ -1,6 +1,6 @@
 import { BASE_URL } from '@/utils/constans'
 import Image from 'next/image'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import HeadCart from '../Global/HeadCart'
 import styles from './cart.module.css'
 import {MdClose} from "react-icons/md"
@@ -12,10 +12,14 @@ import { CartContext } from '@/Context/CartContext'
 import Free from '../Global/Free'
 import {MdArrowBackIosNew} from"react-icons/md"
 import { useRouter } from 'next/navigation'
+import { PaymentContext } from '@/Context/PaymentContext'
 
 const CartView = ({data}) => {
     const {cart,loading,addCount,deleteCount,deleteItem,getCartPrice} = useContext(CartContext)
+    const {checkDiscount,myOrder,getAllProductsPrice} = useContext(PaymentContext)
+    const [discount,setDiscount] = useState("")
     const router = useRouter();
+    
     return (
     <div className='container'>
         <HeadCart data={"cart"} />
@@ -75,7 +79,7 @@ const CartView = ({data}) => {
                                                             </div>
                                                         </td>
                                                         <td >
-                                                            <ViewPrice1 price={item.totalPrice} />
+                                                            <ViewPrice1 price={parseInt(item.priceAsli)} />
                                                         </td>
                                                         <td>
                                                             <div className={styles.conting}>
@@ -88,7 +92,7 @@ const CartView = ({data}) => {
                                                             </div>
                                                         </td>   
                                                         <td >
-                                                            <ViewPrice1 price={item.totalAllPrice} />
+                                                            <ViewPrice1 price={item.totalPrice} />
                                                         </td>
 
                                                     </tr>
@@ -100,8 +104,8 @@ const CartView = ({data}) => {
                                         <div className={styles.contTakhfif}>
                                             <span className={styles.lblTakhfif}>کد تخفیف:</span>
                                             <div>
-                                                <input />
-                                                <span>اعمال کد تخفیف</span>
+                                                <input value={discount} onChange={(e) => setDiscount(e.target.value)} />
+                                                <span onClick={() => checkDiscount(discount)}>اعمال کد تخفیف</span>
                                             </div>
                                         </div>    
                                     </div>
@@ -111,20 +115,40 @@ const CartView = ({data}) => {
                                     <Free  back={"#fff"} />
                                     <div className='flex-between mb10'>
                                         <span className='fn12'>جمع جز</span>
-                                        <ViewPrice1 color={"#797979"} price={2000000}/>
+                                        <ViewPrice1 color={"#797979"} price={getCartPrice()}/>
                                     </div>
 
                                     <div className='flex-between mb10'>
                                         <span className='fn12'>مجموع</span>
-                                        <ViewPrice1 color={"#797979"} price={2000000}/>
+                                        
+                                        <ViewPrice1 color={"#797979"} 
+                                        price={parseInt(getAllProductsPrice(0,getCartPrice(),myOrder.discount)).toLocaleString()}/>
                                     </div>
 
                                     <div className='flex-between mb10'>
                                         <span className='fn12'>تخفیف شما از این خرید</span>
+                                        {
+                                        myOrder.discount && myOrder.discount.type === "darsadi" ?
                                         <div className={styles.takhP}>
-                                            <span>{(800000).toLocaleString()}</span>
+                                            <span>{myOrder.discount.value}</span>
+                                            <span>درصد</span>
+                                        </div>
+                                        :myOrder.discount && myOrder.discount.type === "naghdi"?
+
+                                        <div className={styles.takhP}>
+                                            <span>{myOrder.discount.value.toLocaleString()}</span>
                                             <span>تومان</span>
                                         </div>
+
+                                        :
+
+                                        <div className={styles.takhP}>
+                                            <span>{0}</span>
+                                            <span>تومان</span>
+                                        </div>
+
+                                        }
+                                        
                                     </div>
 
                                     <div onClick={() => router.push('/checkout')} className={styles.btnNext}>

@@ -19,10 +19,12 @@ import lg5 from "../../public/images/lg5.webp"
 
 
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 
 const Footer = () => {
+  const pathName = usePathname()
   return (
-    <footer className={styles.footcont} >
+    <footer style={{display:(pathName === "/panel") && "none"}} className={styles.footcont} >
       <div className="container">
         <div className={styles.cont}>
             <div className={styles.item}>

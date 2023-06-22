@@ -1,7 +1,8 @@
+import AslLoad from "@/Components/Global/AslLoad"
 
 const Loading = () => {
   return (
-    <div>Loading ...</div>
+    <AslLoad />
   )
 }
 

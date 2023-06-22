@@ -2,6 +2,7 @@
 import {useContext } from 'react'
 import CartView from '@/Components/Cart/CartView';
 import { CartContext } from '@/Context/CartContext';
+import AslLoad from '@/Components/Global/AslLoad';
 
 export const metadata = {
     title: 'سبد خرید',
@@ -9,10 +10,18 @@ export const metadata = {
 }
 
 const Cart = () => {
-  const {cart} = useContext(CartContext)
+  const {cart,loading} = useContext(CartContext)
 
   return (
-    <CartView data={cart} />
+    <>
+    {
+      loading ?
+      <AslLoad />
+      :
+      <CartView data={cart} />
+    }
+    </>
+    
   )
 }
 

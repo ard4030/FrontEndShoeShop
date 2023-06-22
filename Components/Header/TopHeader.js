@@ -10,11 +10,13 @@ import { AuthContext } from '@/Context/AuthContext'
 import { CartContext } from '@/Context/CartContext'
 import{FaRegUser,} from "react-icons/fa"
 import {GrUserSettings} from "react-icons/gr"
+import { useRouter } from 'next/navigation'
 
 
 const TopHeader = () => {
-    const {user,logOut} = useContext(AuthContext);
+    const {user,logOut,setViewLogin} = useContext(AuthContext);
     const {cart , setShow} = useContext(CartContext);
+    const router = useRouter()
 
     const logOutHandle = () => {
         logOut()
@@ -41,7 +43,7 @@ const TopHeader = () => {
                         <GrUserSettings/> 
                         <div>
                             <ul>
-                                <li>
+                                <li onClick={() => router.push('/panel')}>
                                     <span>پنل کاربری</span>
                                 </li>
                                 <li>
@@ -54,7 +56,7 @@ const TopHeader = () => {
                         </div>    
                     </div>
                 :
-                    <div className={style.btPanel}>
+                    <div onClick={() => setViewLogin(true)} className={style.btPanel}>
                         <FaRegUser />
                     </div>
 

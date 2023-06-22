@@ -39,7 +39,7 @@ const Slider8 = ({data}) => {
         <div>
             <Slider className={styles.xx}  {...settings}>
                 {data.map((item,index) => 
-                    <ItemComp data={item} index={index} />
+                    <ItemComp key={index} data={item} index={index} />
                 )}
                 
             </Slider>

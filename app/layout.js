@@ -16,6 +16,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import 'swiper/swiper-bundle.css';
 import Login from '@/Components/Global/Login'
 import CartView from '@/Components/Product/CartView'
+import { PaymentWrapper } from '@/Context/PaymentContext'
 
 // const inter = Inter({ subsets: ['latin'] })
 axios.defaults.withCredentials = true;
@@ -31,16 +32,18 @@ export default function RootLayout({ children,href }) {
             <body>
             <AuthWrapper>
               <CartWrapper>
-                <ProductContext>
-                  <AddressWrapper>
-                    <Header />
-                    {/* <LoadingIndicator /> */}
-                    {children}
-                    <Footer />
-                    <Login />
-                    <CartView />
-                  </AddressWrapper>
-                </ProductContext>
+                <PaymentWrapper>
+                  <ProductContext>
+                    <AddressWrapper>
+                      <Header />
+                      {/* <LoadingIndicator /> */}
+                      {children}
+                      <Footer />
+                      <Login />
+                      <CartView />
+                    </AddressWrapper>
+                  </ProductContext>
+                </PaymentWrapper>
               </CartWrapper>
             </AuthWrapper>
             </body>

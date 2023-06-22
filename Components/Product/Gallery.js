@@ -30,7 +30,7 @@ const Gallery = ({ images }) => {
         <Slider ref={sliderRef} className={styles.xx}  {...settings}>
         {
             images.map((item,index) => 
-            <div onClick={() => setActive(item)} className={styles.conting}>
+            <div key={index} onClick={() => setActive(item)} className={styles.conting}>
                 <div className={`${styles.sliImage} ${active === item && styles.actItem}`} key={index}>
                     <Image src={`${BASE_URL}${item}`} fill={true} alt="" />
                 </div>

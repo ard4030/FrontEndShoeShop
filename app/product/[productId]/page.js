@@ -17,9 +17,9 @@ const Product = async (props) => {
 
   return (
     <>
-    {/* {
+    {
       data && <ProductView data={data.data.data[0]} />
-    } */}
+    }
     </>
   )
 }

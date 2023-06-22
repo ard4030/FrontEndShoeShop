@@ -302,7 +302,8 @@ width: 100%;
 .mt0{margin-top: 0;}
 .fn16{font-size: 16px!important;}
 .dnone{display: none!important;}
-
+.mb5{margin-bottom: 5px;}
+.fn13{font-size: 13px;}
 
 /* .ant-slider-track{
   height: 6px!important;
