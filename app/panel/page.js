@@ -1,9 +1,10 @@
+// "use client"
 import ViewPanel from '@/Components/Panel/ViewPanel'
 import React from 'react'
 
 const Panel = () => {
   return (
-    <div className='container'>
+    <div>
         <ViewPanel />
     </div>
   )

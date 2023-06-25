@@ -24,7 +24,7 @@ import { usePathname } from "next/navigation"
 const Footer = () => {
   const pathName = usePathname()
   return (
-    <footer style={{display:(pathName === "/panel") && "none"}} className={styles.footcont} >
+    <footer style={{display:(pathName.startsWith('/panel')) && "none"}} className={styles.footcont} >
       <div className="container">
         <div className={styles.cont}>
             <div className={styles.item}>

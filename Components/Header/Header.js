@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation"
 const Header = ({props}) => {
   const pathName = usePathname();
   return (
-    <header style={{display:(pathName === "/panel") && "none"}} className={style.aslHead}>
+    <header style={{display:(pathName.startsWith('/panel')) && "none"}} className={style.aslHead}>
         <div className="container pb0">
             <TopHeader />
             <BotHeader />

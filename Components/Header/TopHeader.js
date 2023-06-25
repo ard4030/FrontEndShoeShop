@@ -43,7 +43,7 @@ const TopHeader = () => {
                         <GrUserSettings/> 
                         <div>
                             <ul>
-                                <li onClick={() => router.push('/panel')}>
+                                <li onClick={() => router.push('/panel/dashboard')}>
                                     <span>پنل کاربری</span>
                                 </li>
                                 <li>

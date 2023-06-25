@@ -264,7 +264,7 @@ width: 100%;
 .pt5{
   padding-top: 5px;
 }
-.dflex {display: flex;}
+.dflex {display: flex!important;}
 .jsb {justify-content: space-between;}
 .acenter {align-items: center;}
 .mt20{margin-top: 20px;}
@@ -281,7 +281,7 @@ width: 100%;
 .narang{color: #fa7369;}
 .w100{width: 100%;}
 .prelative{position: relative;}
-.lightcol{color: #888;}
+.lightcol{color: #888!important;}
 .mauto{margin: auto;}
 .dblock{display: block;}
 .tcenter{text-align: center;}
@@ -304,6 +304,13 @@ width: 100%;
 .dnone{display: none!important;}
 .mb5{margin-bottom: 5px;}
 .fn13{font-size: 13px;}
+.fn18{font-size: 18px;}
+.ml5{margin-left: 5px;}
+.fn11{font-size: 11px;}
+.pt0{padding-top: 0!important;}
+.inumlight{font-family: inumlight;}
+
+
 
 /* .ant-slider-track{
   height: 6px!important;
