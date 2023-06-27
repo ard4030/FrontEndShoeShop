@@ -16,13 +16,13 @@ module.exports = withBundleAnalyzer({
       },
       {
         protocol: 'http',
-        hostname: 'shopserver.novin-code.ir',
+        hostname: 'backshop.novin-code.ir',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'shopserver.novin-code.ir',
+        hostname: 'backshop.novin-code.ir',
         port: '',
         pathname: '/**',
       },
