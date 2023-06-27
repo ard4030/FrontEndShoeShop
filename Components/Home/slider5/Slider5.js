@@ -44,19 +44,7 @@ function Slider5({slides,data1}) {
         </div>
       </div>
 
-      // <>
-      // <div className={styles.pricing}>
-      //     <div className={styles.price }>
-      //         <span className={styles.khat}>{parseInt(2000000).toLocaleString()}</span>
-      //         <span className={styles.disc}>{parseInt(18500000).toLocaleString()}</span>
-      //         &nbsp;
-      //         <span className={styles.fn1}>تومان</span>
-      //     </div>
-      //     <div className={styles.bs}>
-      //       <BsCart />
-      //     </div>
-      // </div>
-      // </>
+
     )
   }
 
@@ -65,7 +53,7 @@ function Slider5({slides,data1}) {
       <Slider {...settings} className={styles.xx}>
 
         {
-          data1.length > 0 && data1.map((item,index) => 
+          data1.length > 0 ? data1.map((item,index) => 
           <div key={index} className={styles.sl}>
             <div className={styles.contAsli}>
               <div className={styles.slLeft}>
@@ -106,54 +94,14 @@ function Slider5({slides,data1}) {
             </div>
           </div>
           )
-        }
-        
-        {/* <div className={styles.sl}>
-          <div className={styles.contAsli}>
-            <div className={styles.slLeft}>
-              <span className={styles.save}>10%</span>
-              <div className={styles.tit}><span>شگفت انگیز</span></div>
-              <div className={styles.imgs}>
-                <Image className={styles.image} fill src={"https://demos.mahdisweb.net/digiland/wp-content/uploads/2017/10/1-5-600x600.jpg"} alt="s" />
-              </div>
-            </div>
-
-            <div className={styles.slRight}>
-                <div className={styles.name}>
-                لپ تاپ 17 اينچي ام اس آي مدل GS72 6QE Stealth Pro
-                </div>
-
-                <div className={styles.vizh}>
-                  <ul>
-                    {slides[0].vizh.map((item,index) => 
-                    <li key={index}>
-                      <span>{item.name}</span>
-                      <span>:</span>
-                      <span>{item.value}</span>
-                    </li>
-                    )}
-                  </ul>
-                </div>
-
-                <div className={styles.pricing}>
-                    <div className={styles.price }>
-                        <span className={styles.khat}>{parseInt(2000000).toLocaleString()}</span>
-                        <span className={styles.disc}>{parseInt(18500000).toLocaleString()}</span>
-                        &nbsp;
-                        <span className={styles.fn1}>تومان</span>
-                    </div>
-                    <div className={styles.bs}>
-                      <BsCart />
-                    </div>
-                </div>
-                
-                <div className={styles.timer}>
-                   <MyTimer /> 
-                </div>
+          :
+          <div className={styles.sl}>
+            <div className={styles.contAsli}>
+              محصولی موجود نیست
             </div>
           </div>
-        </div> */}
-
+        }
+        
       </Slider>
     </div>
   );

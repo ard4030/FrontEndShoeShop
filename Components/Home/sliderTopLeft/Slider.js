@@ -9,7 +9,13 @@ const SliderLeft = ({data}) => {
         پیشنهاد لحظه ای
       </div>
       <div className={styles.slider}>
-          <Carousel data={data} />
+          {
+            data.length > 0 ?
+
+            <Carousel data={data} /> :
+
+            <p style={{textAlign:"center",color:"#888"}}>محصولی موجود نیست</p>
+          }
       </div>
     </div>
   )

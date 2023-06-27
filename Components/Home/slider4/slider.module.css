@@ -15,7 +15,9 @@
   margin: 0px 0;
   position: relative;
   top: 11px;
-  width: 100%;
+  /* width: 100%; */
+  width: 16%;
+
 }
 
 .left > button{
@@ -196,4 +198,15 @@ overflow: hidden;
 
   .stars > span > svg {
     color: #fdc47a;
+  }
+
+  .emp{
+    background: #fff;
+    width: 95%;
+    height: 338px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    color: #888;
   }

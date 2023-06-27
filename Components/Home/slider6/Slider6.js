@@ -11,7 +11,7 @@ const Slider6 = ({data}) => {
         dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: data.length > 5 ? 5 : data.length,
         slidesToScroll: 2,
         prevArrow: <></>,
         nextArrow: <></>, 

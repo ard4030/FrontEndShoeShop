@@ -30,9 +30,9 @@ const CategorySlider = ({data}) => {
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: 8,
+        slidesToShow: (data.length < 8) ? data.length : 8,
         slidesToScroll: 1,
         nextArrow: <NextArr />,
         prevArrow : <PrevArr /> ,

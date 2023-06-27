@@ -31,7 +31,7 @@ const CartView = () => {
             <div>
                 <ul>
                     {
-                        cart.length > 0 && cart.map((item,index) => 
+                        cart && cart.length > 0 && cart.map((item,index) => 
                         <li key={index}>
                             <div className={styles.cartImage}>
                                 <Image alt='' fill src={`${BASE_URL}${item.image[0].images[0]}`}  />

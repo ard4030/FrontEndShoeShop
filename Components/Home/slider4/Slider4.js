@@ -32,10 +32,11 @@ const Slider4 = ({data,data1}) => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: data1.length > 2 ? 2 : data1.length,
     slidesToScroll: 1,
     prevArrow: <></>,
     nextArrow: <></>, 
+    
   };
 
   const Changing = (id) => {
@@ -84,8 +85,10 @@ const Slider4 = ({data,data1}) => {
 
   return (
     <div className={styles.content}>
-        <div className={styles.left}>
-
+      {
+        data1.length > 0 ?
+        <>
+          <div className={styles.left}>
             {
                 cats.map((item,index) => 
                 <button
@@ -94,10 +97,9 @@ const Slider4 = ({data,data1}) => {
                 className={slids && slids.length > 0 && slids[0].paName === JSON.parse(item).title && styles.active}>{JSON.parse(item).title}</button>
                 )
             }
+          </div>
 
-        </div>
-
-        <div className={styles.right}>
+          <div className={styles.right}>
             <Slider className={styles.xx}  {...settings}>
                 {
                     slids && slids.map((item,index) => 
@@ -139,7 +141,12 @@ const Slider4 = ({data,data1}) => {
                     )
                 }
             </Slider>
-        </div>
+          </div>
+        </>
+        :
+         <div className={styles.emp}>محصولی موجود نیست</div>       
+      }
+        
     </div>
   )
 }

@@ -48,6 +48,13 @@ const MySlider = ({data}) => {
         </div>
         )
       }
+      
+      {
+      data.length < 1 && 
+      <div className={`${styles.mySli} ${styles.emp}`}>
+          <p>هنوز از سمت مدیر عکسی قرار نگرفته</p>
+      </div>
+      }
     </Slider>
     );
 };

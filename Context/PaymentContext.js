@@ -91,6 +91,7 @@ export function PaymentWrapper({ children }) {
       await axios.post(`${BASE_URL}/api/peyment/newCartNextPay`,myOrder,{withCredentials:true}).then(response => {
         if(response.data.success){
           console.log(response.data.data)
+          window.location.href = response.data.data;
         }else{
           alert(response.data.message)
         }
